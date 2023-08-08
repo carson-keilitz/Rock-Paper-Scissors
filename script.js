@@ -45,9 +45,12 @@ function getResults(playerSelection, computerSelection) {
     else return "Error"
 }
 
-function game() {
-    for (i = 0; i < 5; i++) {
-        console.log(getResults(prompt("Input"), getComputerChoice()))
-    }
+const button = document.querySelectorAll('.choiceButton');
+button.forEach((element) => {
+    element.addEventListener('click', () => output(element))
+})
+function output(e){
+    if (e.classList.contains('Rock')) console.log("Rock");
+    else if (e.classList.contains('Scissors')) console.log("Scissors");
+    else console.log("Paper");
 }
-game();
