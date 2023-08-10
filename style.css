@@ -2,9 +2,11 @@ body {
     display: flex;
     height:100vh;
     width: 100vw;
-    justify-content: center;
-    background-color: #e76f51;
-    margin: 0;
+    justify-content: stretch;
+    background-color: white;
+    padding: 0;
+    flex:1;
+    
 }
 .content {
     display:flex;
@@ -12,8 +14,9 @@ body {
     background-color: #264653;
     justify-content:space-between;
     max-width: 900px;
-    flex: 1;
+    flex-grow: 9;
     font-family: "Open Sans",Helvetica,sans-serif;
+    margin:0;
 }
 
 .title{
@@ -63,7 +66,27 @@ button {
 .restartScreen {
     justify-content: center;
 }
-
+.finalResultsDiv {
+    color:white;
+    font-size: 60px;
+}
+.restart{
+    align-self: center;
+    justify-content: center;
+}
+img {
+    width:100px;
+    height:auto;
+}
+.leftPictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex:1;
+    align-items: center;
+    background-color: #e76f51;
+    margin:0;
+}
 
 
 
