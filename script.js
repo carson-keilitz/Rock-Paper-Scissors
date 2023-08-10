@@ -90,6 +90,7 @@ let score = document.querySelector(".score");
 let finalResultsDiv = document.querySelector(".finalResultsDiv");
 let button = document.querySelectorAll('.choiceButton');
 let results = document.querySelector(".results");
+let title = document.querySelector('.title')
 //Returns Rock, Paper, and Scissors when clicking buttons
 addEventListeners()
 
@@ -106,12 +107,13 @@ function addMainContent() {
     const childResults = document.createElement("div")
     const add = document.querySelector(".add")
     const childScore = document.createElement("div");
+
     childScore.classList.add("score", "remove");
     childResults.classList.add("results", "remove");
     add.appendChild(childResults);
     add.appendChild(childScore)
     console.log(childResults)
-    
+    addtitle()
     addButtonElements()
     addEventListeners()
     removeEndButtons()
@@ -121,6 +123,7 @@ function addEventListeners(){
     button = document.querySelectorAll('.choiceButton');
     results = document.querySelector(".results");
     score = document.querySelector(".score");
+    title = document.querySelector('title')
     score.textContent = `${playerWins} Player ${computerWins} Computer`;
     console.log(results)
     button.forEach((element) => {
@@ -150,4 +153,12 @@ function removeEndButtons() {
     restart = document.querySelector('.startGame')
     finalResults.remove();
     restart.remove()
+}
+function addtitle() {
+    const content = document.querySelector('.content')
+    const childTitle = document.createElement('div')
+    childTitle.classList.add('title', 'remove')
+    childTitle.textContent = 'Rock Paper Scissors'
+    // const playerChoices = document.querySelector('.plauerChoices')
+    content.insertBefore(childTitle, content.children[0])
 }
