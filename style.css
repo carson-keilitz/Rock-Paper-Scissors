@@ -10,7 +10,7 @@ body {
     display:flex;
     flex-direction: column;
     background-color: #264653;
-    justify-content: center;
+    justify-content:space-between;
     max-width: 900px;
     flex: 1;
     font-family: "Open Sans",Helvetica,sans-serif;
@@ -45,9 +45,24 @@ button {
     padding: 40px;
     font-size: 20px;
 }
+.add {
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+}
+.score {
+    align-self: center;
+    font-weight: 700;
+    color:white;
+}
+.finalResultsDiv {
+    display: flex;
+    justify-content: center;
+}
 
-
-
+.restartScreen {
+    justify-content: center;
+}
 
 
 

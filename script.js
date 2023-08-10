@@ -78,6 +78,8 @@ function checkScore() {
 }
 function endGame() {
     const remove = document.querySelectorAll(".remove");
+    let content = document.querySelector('.content')
+    content.classList.add('restartScreen')
     let restart = document.querySelector(".restart")
     playerWins = 0, computerWins = 0
     remove.forEach((element) => {
@@ -99,7 +101,7 @@ function restartButton() {
     startGame.addEventListener('click', ()=> {
         // remove results
         addMainContent()
-        
+        addRestartScreen()
     })
 }
 
@@ -156,6 +158,8 @@ function removeEndButtons() {
 }
 function addtitle() {
     const content = document.querySelector('.content')
+    //remove the attribute for restart screen
+    content.classList.remove('restartScreen')
     const childTitle = document.createElement('div')
     childTitle.classList.add('title', 'remove')
     childTitle.textContent = 'Rock Paper Scissors'
